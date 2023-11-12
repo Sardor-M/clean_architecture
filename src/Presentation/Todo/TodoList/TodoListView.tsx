@@ -20,14 +20,16 @@ export default function TodoListView() {
 
 
     return (
-        <List>
+        <List >
+            <h1 className="text-xl font-bold">Hello Tailwind!</h1>
             <input
+                className="text-xl font-bold"
                 onChange={onChangeValue}
                 placeholder="add your todo"
                 type="text"
                 value={value}
             />
-            <button onClick={createTodo}> Add</button>
+            <button onClick={createTodo} className="text-xl font-bold"> Add</button>
             {todos.map((todo, i) => {
                 return (
                     <ListItem key={i}>
