@@ -64,18 +64,18 @@ function db<T>(table: string) {
     }
 
     return {
-        getAllData(){
+        getAllData() {
             return [] as T[];
         },
-        getById(columnId: string){
+        getById(columnId: string) {
             return {} as T;
         },
-        create<T>(params: T){
+        create<T>(params: T) {
         },
-        removeById(columnId: string){
+        removeById(columnId: string) {
             return false;
         },
-        updateByField(columnId: string, field: any, newValue: any){
+        updateByField(columnId: string, field: any, newValue: any) {
             return {} as T;
         },
     };
