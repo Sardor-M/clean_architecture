@@ -6,7 +6,7 @@ import TodoListView from "./Presentation/Todo/TodoList/TodoListView";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" >
             <ToastContainer/>
             <TodoListView/>
         </div>
