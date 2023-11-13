@@ -25,7 +25,7 @@ export default function TodoListView() {
         <div className="flex justify-center items-center min-h-screen">
             <div className="m-auto p-5 w-full md:w-1/3 ld:w-2/5">
                 {/*"m-auto p-5 w-full md:w-3/4 lg:w-1/2"*/}
-                <h1 className="text-2xl font-bold text-left">Organize your To-dos  </h1>
+                <h1 className="text-2xl font-bold text-left">Organize your To-dos </h1>
 
                 <div className="flex mt-4">
                     <input
@@ -43,7 +43,7 @@ export default function TodoListView() {
                     > Add
                     </Button>
                 </div>
-                <List >
+                <List>
                     {todos.map((todo, i) => {
                         return (
                             <ListItem key={i}>
