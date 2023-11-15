@@ -15,6 +15,7 @@ export default function TodoListViewModel() {
     const [todos, setTodos] = useState<Todo[]>([]);
     const [value, setValue] = useState("");
 
+
     const todosDataSourceImpl = new TodoAPIDataSourceImpl();
     const todosRepositoryImpl = new TodoRepositoryImpl(todosDataSourceImpl);
 
@@ -40,7 +41,16 @@ export default function TodoListViewModel() {
         } catch (e) {
             _resetValue();
             if (e instanceof Error) {
-                toast(e.message);
+                toast.error(e.message, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
             }
         }
     }

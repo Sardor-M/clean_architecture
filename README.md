@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+## Clean Architecture implementation in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple to-do list application that uses the Clean Architecture principles.
 
-## Available Scripts
 
-In the project directory, you can run:
+### Clean Architecture
 
-### `npm start`
+The Clean Architecture is a software architecture proposed by Uncle Bob, which is based on the separation of concerns principle. The main idea is to divide the software into layers, where each layer has a specific responsibility. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Layered Architecture: 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Data**: It handles data retrieval and storage. And it may interact with APIs, databases. 
+  - **DataSource**: It contains classes or functions that directly interact with data sources like APIs.
+  - **Repository**: It provides an abstraction layer over the data source, typically implementing the repository pattern.
+- **Domain**: It contains the business logic of the application. It is the most inner layer of the application. It is independent of any other layer. 
+  - **Model**: It contains and defines the data structures and data models of the application.
+  - **Repository**: It defines the interfaces of the repositories that are implemented in the data layer.
+  - **UseCase**: This folder contains the application-specific business rules - use cases. It is also the most inner layer of the application.
+- **Presentation**: It contains the UI components of the application. It is dependent on the domain layer. 
+  - **View**: It contains the UI components of the application.
+  - **ViewModel**: It contains the business logic of the UI layer. It is dependent on the use cases of the domain layer.
 
-### `npm test`
+### Project Structure: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+````
+├── public
+├── src
+│   ├── Data
+│   │   ├── DataSource
+│   │   │   └── API
+│   │   │       └── TodoDataSource.ts
+│   │   └── Repository
+│   │       └── TodoRepositoryImpl.ts
+│   ├── Domain
+│   │   ├── Model
+│   │   │   └── Todo.ts
+│   │   ├── Repository
+│   │   │   └── TodoRepository.ts
+│   │   └── UseCase
+│   │       └── Todo
+│   │           ├── CreateTodo.ts
+│   │           ├── GetTodos.ts
+│   │           ├── RemoveTodo.ts
+│   │           └── ToggleCheckTodo.ts
+│   ├── Presentation
+│   │   └── Todo
+│   │       └── TodoList
+│   │           ├── TodoListView.tsx
+│   │           └── TodoListViewModel.tsx
+│   ├── App.css
+│   ├── App.test.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   └── index.tsx
+└── package.json
 
-### `npm run build`
+````
+### How to run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
+npm install
+npm start
+````
+### How to run tests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+````
+npm test
+npm test -- --coverage
+````
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
