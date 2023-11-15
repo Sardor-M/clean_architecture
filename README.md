@@ -3,11 +3,11 @@
 This project is a simple to-do list application that uses the Clean Architecture principles.
 
 
-### Clean Architecture
+### 🗂️ Clean Architecture
 
 The Clean Architecture is a software architecture proposed by Uncle Bob, which is based on the separation of concerns principle. The main idea is to divide the software into layers, where each layer has a specific responsibility. 
 
-### Layered Architecture: 
+###  🗄️ Layered Architecture: 
 
 - **Data**: It handles data retrieval and storage. And it may interact with APIs, databases. 
   - **DataSource**: It contains classes or functions that directly interact with data sources like APIs.
@@ -20,7 +20,7 @@ The Clean Architecture is a software architecture proposed by Uncle Bob, which i
   - **View**: It contains the UI components of the application.
   - **ViewModel**: It contains the business logic of the UI layer. It is dependent on the use cases of the domain layer.
 
-### Project Structure: 
+### 🏗️ Project Structure: 
 
 ````
 ├── public
@@ -55,16 +55,17 @@ The Clean Architecture is a software architecture proposed by Uncle Bob, which i
 └── package.json
 
 ````
-### How to run
+### ➡️ How to run
 
 ````
 npm install
 npm start
 ````
-### How to run tests
 
-````
-npm test
-npm test -- --coverage
-````
+### 📚 References
+
+- [Clean-Code-Javascript](https://github.com/ryanmcdermott/clean-code-javascript)
+- [Domain-Driven_Hexagon](https://github.com/Sairyss/domain-driven-hexagon)
+- [Clean-Code-Typescript](https://github.com/labs42io/clean-code-typescript)
+
 
