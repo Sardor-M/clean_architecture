@@ -3,7 +3,7 @@ function db<T>(table: string) {
         const setTable = (value: any) => window.localStorage.setItem(table, value);
         const getTable = () => window.localStorage.getItem(table);
 
-        if (!getTable) {
+        if (!getTable()) {
             setTable(JSON.stringify([]));
         }
 

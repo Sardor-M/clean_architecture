@@ -65,3 +65,8 @@ export default function TodoListView() {
         </div>
     );
 }
+
+// : (
+//     <ListItem>
+//         <ListItemText primary="No todos yet"/>
+//     </ListItem>

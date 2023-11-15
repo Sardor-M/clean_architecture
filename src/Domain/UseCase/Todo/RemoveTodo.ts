@@ -5,6 +5,7 @@ export interface RemoveTodosUseCase {
 }
 export class RemoveTodo implements RemoveTodosUseCase {
     private todoRepo: TodoRepository;
+
     constructor(_todoRepo: TodoRepository) {
         this.todoRepo = _todoRepo;
     }
