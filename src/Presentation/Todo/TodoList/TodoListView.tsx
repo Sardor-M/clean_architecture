@@ -44,7 +44,7 @@ export default function TodoListView() {
                     </Button>
                 </div>
                 <List>
-                    {todos.map((todo, i) => {
+                    {todos && todos.map((todo, i) => {
                         return (
                             <ListItem key={i}>
                                 <ListItemSuffix>
