@@ -1,6 +1,7 @@
 {
   "name": "to-do-list_clean_code",
   "version": "0.1.0",
+  "homepage": "https://sardor-m.github.io/clean_architecture",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -22,6 +23,8 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
