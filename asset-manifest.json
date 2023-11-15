@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/clean_architecture/static/css/main.1ad6d74d.css",
-    "main.js": "/clean_architecture/static/js/main.294ebebe.js",
+    "main.js": "/clean_architecture/static/js/main.c51e354e.js",
     "index.html": "/clean_architecture/index.html",
     "main.1ad6d74d.css.map": "/clean_architecture/static/css/main.1ad6d74d.css.map",
-    "main.294ebebe.js.map": "/clean_architecture/static/js/main.294ebebe.js.map"
+    "main.c51e354e.js.map": "/clean_architecture/static/js/main.c51e354e.js.map"
   },
   "entrypoints": [
     "static/css/main.1ad6d74d.css",
-    "static/js/main.294ebebe.js"
+    "static/js/main.c51e354e.js"
   ]
 }
